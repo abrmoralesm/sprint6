@@ -1,6 +1,7 @@
 import React from "react";
-import { StyleHistory } from "./Styled";
+import { EscenaStyled } from "./Styled";
 
-export const Escena = ({ text }) => (
-  <StyleHistory className="text">{text}</StyleHistory>
+export const Escena = ({ isActive, text}) => (
+  <EscenaStyled className={`"text" ${isActive ? "backActive" : ""}`}>{text}</EscenaStyled>
 );
+
