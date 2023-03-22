@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+export const Escenas = styled.div`
+display:flex;
+flex-direction: column;
+`;
 export const EscenaStyled = styled.div`
   margin: 1.5rem 2rem;
   padding: 1rem;

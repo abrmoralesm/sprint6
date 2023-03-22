@@ -1,7 +1,14 @@
 import React from "react";
-import { EscenaStyled } from "./Styled";
+import { Escenas, EscenaStyled } from "./Styled";
 
-export const Escena = ({ isActive, text}) => (
-  <EscenaStyled className={`"text" ${isActive ? "backActive" : ""}`}>{text}</EscenaStyled>
+export const Escena = ({ textActive, text }) => (
+  <Escenas className="escenes">
+    {text.map((element) => (
+      <EscenaStyled
+        key={element.id}
+        className={`"text" ${textActive === element.id ? "backActive" : ""}`}>
+        {element.text}
+      </EscenaStyled>
+    ))}
+  </Escenas>
 );
-
