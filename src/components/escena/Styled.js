@@ -11,6 +11,7 @@ export const EscenaStyled = styled.div`
   text-align: center;
   border: 0.2rem solid #2f2e2e;
   border-radius: 2rem;
+  background-color:  rgba(253, 252, 252, 0.5);
 
   &.backActive {
     background-color: #dfa0bb;

@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, ContainerText, BotonStart } from "./styled";
+import { Container, ContainerText, BotonStart } from "./Styled";
 
 export const Benvinguda = ({ start }) => {
   return (

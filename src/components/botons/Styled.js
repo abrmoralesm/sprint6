@@ -7,11 +7,11 @@ export const BlockBotons = styled.div`
 
 export const SingleBotons = styled.button`
   width: 47vw;
-  margin: 0.6rem;
+  margin: 0.3rem;
   padding: 1.5rem;
   font-size: 2rem;
   border: 0.1rem solid #000;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   &:hover {
     background-color: #e7c1d2;
   }

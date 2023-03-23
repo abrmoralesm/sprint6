@@ -1,8 +1,9 @@
-import { Escena } from "./components/escena/Escena";
-import { text } from "./fakeApi/text";
-import { Botons } from "./components/botons/Botons";
-import { useState } from "react";
-import { Benvinguda } from "./components/benvinguda/Benvinguda";
+import { useState } from 'react';
+import { Escena } from './components/Escena/Escena';
+import { text } from './fakeApi/text';
+import { Botons } from './components/Botons/Botons';
+import { Benvinguda } from './components/Benvinguda/Benvinguda';
+import { BackEscenaImg } from './components/allStyles/BackEscenaImg';
 
 function App() {
   const [inici, setInici] = useState(true);
@@ -15,13 +16,15 @@ function App() {
     textActive !== 1 && setTextActive((textActive) => textActive - 1);
 
   return (
-    <div>
+    <div className='App'>
       {inici ? (
         <>
           <Benvinguda start={start} />
         </>
       ) : (
         <>
+
+        <BackEscenaImg text={text} textActive={textActive}/>
           <Botons increment={increment} decrement={decrement} />
           <Escena text={text} textActive={textActive} />
         </>
