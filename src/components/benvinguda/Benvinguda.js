@@ -3,7 +3,7 @@ import { Container, ContainerText, BotonStart } from "./Styled";
 
 export const Benvinguda = ({ start }) => {
   return (
-    <>
+    <div>
       <Container>
         <ContainerText>
           <h1>Benvinguts a l'Sprint6</h1>
@@ -19,9 +19,9 @@ export const Benvinguda = ({ start }) => {
             d'ajuda i la imatge de fons.
           </p>
         </ContainerText>
-       
+
         <BotonStart onClick={start}>Inici</BotonStart>
       </Container>
-    </>
+    </div>
   );
 };

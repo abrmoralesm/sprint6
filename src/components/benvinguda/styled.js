@@ -17,11 +17,7 @@ export const Container = styled.div`
   border: 0.2rem solid #000;
   border-radius: 1rem;
   background: #eeaeca;
-  background: radial-gradient(
-    circle,
-    #db9ab6 0%,
-    #94bbe9 100%
-  );
+  background: radial-gradient(circle, #db9ab6 0%, #94bbe9 100%);
 `;
 
 export const ContainerText = styled.div`
