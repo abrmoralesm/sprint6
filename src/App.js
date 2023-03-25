@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import { Escena } from "./components/Escena/Escena";
+import { text } from "./fakeApi/text";
+import { Botons } from "./components/Botons/Botons";
+import { Benvinguda } from "./components/Benvinguda/Benvinguda";
+import { BackEscenaImg } from "./components/BackImg/BackEscenaImg";
 
 function App() {
+  const [inici, setInici] = useState(true);
+  const start = () => setInici(false);
+
+  const [textActive, setTextActive] = useState(1);
+  const increment = () =>
+    textActive !== text.length && setTextActive((textActive) => textActive + 1);
+  const decrement = () =>
+    textActive !== 1 && setTextActive((textActive) => textActive - 1);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {inici ? (
+        <>
+          <Benvinguda start={start} />
+        </>
+      ) : (
+        <>
+          <Botons increment={increment} decrement={decrement} />
+          <Escena text={text} textActive={textActive} />
+          <BackEscenaImg text={text} textActive={textActive} />
+        </>
+      )}
     </div>
   );
 }
