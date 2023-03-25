@@ -23,9 +23,10 @@ function App() {
         </>
       ) : (
         <>
-          <BackEscenaImg text={text} textActive={textActive} />
           <Botons increment={increment} decrement={decrement} />
           <Escena text={text} textActive={textActive} />
+          <BackEscenaImg text={text} textActive={textActive} />
+          
         </>
       )}
     </div>

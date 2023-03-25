@@ -5,9 +5,9 @@ export const Escenas = styled.div`
   flex-direction: column;
 `;
 export const EscenaStyled = styled.div`
-  color: rgba(0, 0, 0, 0.5);
-  margin: 0.5rem 2rem;
+  margin: 0.9rem 2rem;
   padding: 1rem;
+  color: rgba(0, 0, 0, 0.5);
   font-size: 1.3rem;
   text-align: center;
   border: 0.2rem solid #2f2e2e;
